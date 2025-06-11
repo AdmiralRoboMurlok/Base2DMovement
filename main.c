@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 void grid(int head_row, int head_col) {
     for (int i = 0; i < 6; i++)
@@ -30,23 +31,39 @@ void running(){
         scanf(" %c", &input);
         if (input == 'a')
         {
-            head_col--; // Dodać if, by nie szedł poza 0
-            grid(head_row, head_col);
+            if (head_col > 0){
+                head_col--;
+                // Wyczyścić terminal
+                grid(head_row, head_col);
+            }
+            else { printf("Za daleko"); }
         }
         else if (input == 'd')
         {
-            head_col++; // Dodać if, by nie szedł poza 6
-            grid(head_row, head_col);
+            if (head_col < 5) {
+                head_col++;
+                // Wyczyścić terminal
+                grid(head_row, head_col);
+            }
+            else { printf("Za daleko"); }
         }
         else if (input == 'w')
         {
-            head_row--; // Dodać if, by nie szedł poza 6
-            grid(head_row, head_col);
+            if (head_row > 0) {
+                head_row--;
+                // Wyczyścić terminal
+                grid(head_row, head_col);
+            }
+            else { printf("Za daleko"); }
         }
         else if (input == 's')
         {
-            head_row++; // Dodać if, by nie szedł poza 6
-            grid(head_row, head_col);
+            if (head_row < 5){
+                head_row++;
+                // Wyczyścić terminal
+                grid(head_row, head_col);
+            }
+            else { printf("Za daleko"); }
         }
         else if (input == 'k')
         {
