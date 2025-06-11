@@ -33,7 +33,7 @@ void running(){
         {
             if (head_col > 0){
                 head_col--;
-                // Wyczyścić terminal
+                system("clear");
                 grid(head_row, head_col);
             }
             else { printf("Za daleko"); }
@@ -42,7 +42,7 @@ void running(){
         {
             if (head_col < 5) {
                 head_col++;
-                // Wyczyścić terminal
+                system("clear");
                 grid(head_row, head_col);
             }
             else { printf("Za daleko"); }
@@ -51,7 +51,7 @@ void running(){
         {
             if (head_row > 0) {
                 head_row--;
-                // Wyczyścić terminal
+                system("clear");
                 grid(head_row, head_col);
             }
             else { printf("Za daleko"); }
@@ -60,7 +60,7 @@ void running(){
         {
             if (head_row < 5){
                 head_row++;
-                // Wyczyścić terminal
+                system("clear");
                 grid(head_row, head_col);
             }
             else { printf("Za daleko"); }
