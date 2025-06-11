@@ -2,20 +2,17 @@
 #include <stdbool.h>
 
 void grid(int head_row, int head_col) {
-    char grid_map[6][6];
-
     for (int i = 0; i < 6; i++)
     {
         for (int j = 0; j < 6; j++)
         {
             if (i == head_row && j == head_col)
             {
-                grid_map[i][j] = 'X';
-            } else grid_map[i][j] = 'O';
+                printf("X");
+            }else { printf("O"); }
         }
+        printf("\n");
     }
-
-    printf(grid_map); // Musimy printować inaczej, bo tak printuje się w lini
 }
 
 void running(){
@@ -43,7 +40,7 @@ void running(){
         }
         else if (input == 'w')
         {
-            head_row++; // Dodać if, by nie szedł poza 6
+            head_row--; // Dodać if, by nie szedł poza 6
             grid(head_row, head_col);
         }
         else if (input == 's')
@@ -55,6 +52,7 @@ void running(){
         {
             execute = false;
         }
+        else { printf("Nieznana funckja"); grid(head_row, head_col);}
     }
 }
 
